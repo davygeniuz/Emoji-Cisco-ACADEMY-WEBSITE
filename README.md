@@ -57,6 +57,19 @@ strategic collaboration with the Cisco Networking Academy — presenting the
 └── README.md
 ```
 
+## Design
+
+Built on a Cisco-inspired brand system:
+
+- **Palette**: Cisco Blue `#00bceb`, Cisco Dark Navy `#0e2749`, soft grey `#f5f8fb`
+- **Type**: Space Grotesk (display), Inter (body), JetBrains Mono (labels)
+- **Logos**: authentic Cisco bridge mark + Emoji Digitals globe lockup, inline SVG
+- **Motion**: aurora mesh gradients, word-by-word heading reveals, pointer-glare
+  cards, 3D tilt, magnetic buttons, marquee, scroll progress, parallax hero,
+  animated counters, smooth accordions
+- Fully responsive (desktop → mobile), accessible (skip link, ARIA, focus rings,
+  `prefers-reduced-motion` respected)
+
 ## Running locally
 
 No build step required — any static file server works:

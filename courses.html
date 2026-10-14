@@ -7,18 +7,34 @@
   <meta name="description" content="Explore the Cisco-Emoji Digitals Tech & Creative Skills Program — Tech and Creative tracks for SS1–SS3 students, delivery model, plans and school requirements." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230e2438'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230e2749'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="header">
     <div class="container header__inner">
       <a class="logo" href="index.html" aria-label="Emoji Cisco Networking Academy — home">
-        <span class="logo__mark" aria-hidden="true">🌐</span>
-        <span class="logo__text">Emoji Cisco <small>Networking Academy</small></span>
+        <span class="lockup">
+            <span class="lockup__mark">
+              <span class="brand-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2"/><path d="M12 3.4c2.7 2.5 2.7 14.7 0 17.2"/><path d="M12 3.4c-2.7 2.5-2.7 14.7 0 17.2"/></svg></span>
+              <span class="brand-words">
+                <strong>Emoji Digitals</strong>
+                <small>Networking Academy</small>
+              </span>
+            </span>
+            <span class="lockup__divider" aria-hidden="true"></span>
+            <span class="lockup__cisco">
+              <svg class="bridge" viewBox="0 5.6 24 7" fill="currentColor" aria-hidden="true"><path d="M0 10.728a.521.521 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155M2.876 10.728a.522.522 0 001.04 0V8.139a.52.52 0 00-1.039 0v2.589M5.737 11.771a.52.52 0 001.039 0V6.17a.52.52 0 00-1.039 0v5.601M8.624 10.728a.52.52 0 001.039 0V8.139a.52.52 0 00-1.039 0v2.589M11.494 10.728a.522.522 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155M14.393 10.728a.521.521 0 001.04 0V8.139a.52.52 0 00-1.039 0v2.589M17.231 11.771a.521.521 0 001.039 0V6.17a.52.52 0 00-1.039 0v5.601M20.117 10.728a.522.522 0 001.041 0V8.139a.521.521 0 00-1.04 0v2.589M22.961 10.728a.52.52 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155"/></svg>
+              <span class="cisco-words">
+                <strong>Cisco</strong>
+                <small>Networking Academy</small>
+              </span>
+            </span>
+          </span>
       </a>
       <nav class="nav" aria-label="Primary">
         <a class="nav__link" href="index.html">Home</a>
@@ -33,7 +49,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>
           +234 810 298 2020
         </a>
-        <a class="btn btn--primary btn--sm" href="contact.html">Partner with us</a>
+        <a class="btn btn--primary btn--sm" href="contact.html" data-magnetic>Partner with us</a>
         <button class="burger" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -53,6 +69,7 @@
   <main id="main">
     <!-- ===================== PAGE HERO ===================== -->
     <section class="page-hero">
+      <div class="hero__aurora" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="index.html">Home</a> <span aria-hidden="true">/</span> <span>Programs</span>
@@ -232,12 +249,28 @@
   </main>
 
   <footer class="footer">
+    <span class="footer__glow" aria-hidden="true"></span>
     <div class="container">
       <div class="footer__grid">
         <div>
-          <a class="logo" href="index.html">
-            <span class="logo__mark" aria-hidden="true">🌐</span>
-            <span class="logo__text" style="color:#fff">Emoji Cisco <small>Networking Academy</small></span>
+          <a class="logo" href="index.html" aria-label="Emoji Cisco Networking Academy — home">
+            <span class="lockup">
+            <span class="lockup__mark">
+              <span class="brand-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2"/><path d="M12 3.4c2.7 2.5 2.7 14.7 0 17.2"/><path d="M12 3.4c-2.7 2.5-2.7 14.7 0 17.2"/></svg></span>
+              <span class="brand-words">
+                <strong>Emoji Digitals</strong>
+                <small>Networking Academy</small>
+              </span>
+            </span>
+            <span class="lockup__divider" aria-hidden="true"></span>
+            <span class="lockup__cisco">
+              <svg class="bridge" viewBox="0 5.6 24 7" fill="currentColor" aria-hidden="true"><path d="M0 10.728a.521.521 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155M2.876 10.728a.522.522 0 001.04 0V8.139a.52.52 0 00-1.039 0v2.589M5.737 11.771a.52.52 0 001.039 0V6.17a.52.52 0 00-1.039 0v5.601M8.624 10.728a.52.52 0 001.039 0V8.139a.52.52 0 00-1.039 0v2.589M11.494 10.728a.522.522 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155M14.393 10.728a.521.521 0 001.04 0V8.139a.52.52 0 00-1.039 0v2.589M17.231 11.771a.521.521 0 001.039 0V6.17a.52.52 0 00-1.039 0v5.601M20.117 10.728a.522.522 0 001.041 0V8.139a.521.521 0 00-1.04 0v2.589M22.961 10.728a.52.52 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155"/></svg>
+              <span class="cisco-words">
+                <strong>Cisco</strong>
+                <small>Networking Academy</small>
+              </span>
+            </span>
+          </span>
           </a>
           <p class="footer__about">Emoji Digitals, in strategic collaboration with the Cisco Networking Academy, presenting the Cisco-Emoji Digitals Tech &amp; Creative Skills Program for Nigerian secondary schools.</p>
           <div class="social-row">

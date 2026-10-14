@@ -1,13 +1,34 @@
 /* ============================================================
-   Emoji Cisco Networking Academy — Core Script
+   Emoji Cisco Networking Academy — Motion & Interactions
    ============================================================ */
 (function () {
   "use strict";
 
-  /* ---------- Sticky header state ---------- */
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const easeExpo = "cubic-bezier(0.16, 1, 0.3, 1)";
+
+  /* ---------- Scroll progress bar ---------- */
+  const progress = document.querySelector(".scroll-progress");
   const header = document.querySelector(".header");
+  const toTop = document.querySelector(".to-top");
+
+  let ticking = false;
   const onScroll = () => {
-    if (header) header.classList.toggle("header--scrolled", window.scrollY > 8);
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (progress) progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+      if (header) header.classList.toggle("header--scrolled", y > 10);
+      if (toTop) toTop.classList.toggle("show", y > 600);
+      // Hero parallax
+      const visual = document.querySelector(".hero__visual");
+      if (visual && y < window.innerHeight * 1.2 && !prefersReduced) {
+        visual.style.transform = `translateY(${y * -0.055}px)`;
+      }
+      ticking = false;
+    });
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -22,7 +43,6 @@
       burger.setAttribute("aria-expanded", String(open));
       document.body.style.overflow = open ? "hidden" : "";
     });
-    // Close when a link is tapped
     mobileNav.querySelectorAll("a").forEach((link) =>
       link.addEventListener("click", () => {
         mobileNav.classList.remove("open");
@@ -35,16 +55,33 @@
 
   /* ---------- Active nav link ---------- */
   const current = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  document.querySelectorAll(".nav__link, .mobile-nav .nav__link").forEach((link) => {
+  document.querySelectorAll(".nav__link").forEach((link) => {
     const href = (link.getAttribute("href") || "").toLowerCase();
     if (href === current || (current === "" && href === "index.html")) {
       link.classList.add("active");
     }
   });
 
+  /* ---------- Split headings into animatable words ---------- */
+  document.querySelectorAll("[data-split]").forEach((el) => {
+    const words = el.textContent.trim().split(/\s+/);
+    const offset = parseFloat(el.dataset.splitOffset || "0");
+    el.textContent = "";
+    words.forEach((word, i) => {
+      const wrap = document.createElement("span");
+      wrap.className = "split-word";
+      const inner = document.createElement("span");
+      inner.textContent = word;
+      inner.style.transitionDelay = `${0.06 + offset + i * 0.06}s`;
+      wrap.appendChild(inner);
+      el.appendChild(wrap);
+      if (i < words.length - 1) el.appendChild(document.createTextNode(" "));
+    });
+  });
+
   /* ---------- Scroll reveal ---------- */
   const revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && revealEls.length) {
+  if ("IntersectionObserver" in window && !prefersReduced) {
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -54,27 +91,27 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
     revealEls.forEach((el) => io.observe(el));
   } else {
     revealEls.forEach((el) => el.classList.add("visible"));
   }
 
-  /* ---------- Animated stat counters ---------- */
+  /* ---------- Animated counters ---------- */
   const counters = document.querySelectorAll("[data-count]");
   const runCounter = (el) => {
     const target = parseFloat(el.dataset.count);
     const decimals = parseInt(el.dataset.decimals || "0", 10);
-    const duration = 1600;
+    const duration = 1800;
     const start = performance.now();
+    const fmt = (v) => v.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     const step = (now) => {
       const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      const value = (target * eased).toFixed(decimals);
-      el.textContent = value.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      const eased = 1 - Math.pow(1 - p, 4);
+      el.textContent = fmt(target * eased);
       if (p < 1) requestAnimationFrame(step);
-      else el.textContent = target.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      else el.textContent = fmt(target);
     };
     requestAnimationFrame(step);
   };
@@ -88,9 +125,51 @@
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.4 }
     );
     counters.forEach((el) => co.observe(el));
+  }
+
+  /* ---------- Pointer glare on cards ---------- */
+  if (!prefersReduced && window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll(".card, .price-card, .course-card, .quote-card").forEach((card) => {
+      card.addEventListener("pointermove", (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        card.style.setProperty("--my", `${e.clientY - r.top}px`);
+      });
+    });
+  }
+
+  /* ---------- 3D tilt on cards ---------- */
+  if (!prefersReduced && window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll("[data-tilt]").forEach((card) => {
+      const strength = parseFloat(card.dataset.tilt) || 6;
+      card.addEventListener("pointermove", (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(900px) rotateX(${py * -strength}deg) rotateY(${px * strength}deg) translateY(-4px)`;
+      });
+      card.addEventListener("pointerleave", () => {
+        card.style.transform = "";
+      });
+    });
+  }
+
+  /* ---------- Magnetic buttons ---------- */
+  if (!prefersReduced && window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll("[data-magnetic]").forEach((btn) => {
+      btn.addEventListener("pointermove", (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        btn.style.transform = `translate(${x * 0.22}px, ${y * 0.22}px)`;
+      });
+      btn.addEventListener("pointerleave", () => {
+        btn.style.transform = "";
+      });
+    });
   }
 
   /* ---------- FAQ accordion ---------- */
@@ -100,7 +179,6 @@
     if (!btn || !panel) return;
     btn.addEventListener("click", () => {
       const isOpen = item.classList.contains("open");
-      // Close siblings in the same accordion group
       const group = item.closest(".faq");
       if (group) {
         group.querySelectorAll(".faq__item.open").forEach((other) => {
@@ -117,7 +195,7 @@
     });
   });
 
-  /* ---------- Course filter ---------- */
+  /* ---------- Course / track filter ---------- */
   const filterBtns = document.querySelectorAll(".filter-btn");
   const courseCards = document.querySelectorAll("[data-track]");
   if (filterBtns.length && courseCards.length) {
@@ -133,7 +211,9 @@
           if (match) {
             shown++;
             card.classList.remove("visible");
-            requestAnimationFrame(() => requestAnimationFrame(() => card.classList.add("visible")));
+            requestAnimationFrame(() =>
+              requestAnimationFrame(() => card.classList.add("visible"))
+            );
           }
         });
         const empty = document.querySelector(".courses-empty");
@@ -142,7 +222,7 @@
     });
   }
 
-  /* ---------- Contact form validation ---------- */
+  /* ---------- Form validation ---------- */
   const form = document.querySelector("#enroll-form");
   if (form) {
     const success = form.querySelector(".form-success");
@@ -184,7 +264,7 @@
       const btn = form.querySelector('button[type="submit"]');
       const original = btn.innerHTML;
       btn.disabled = true;
-      btn.innerHTML = "Submitting…";
+      btn.innerHTML = "Sending…";
       setTimeout(() => {
         btn.disabled = false;
         btn.innerHTML = original;
@@ -192,13 +272,13 @@
         if (success) {
           success.classList.add("show");
           success.scrollIntoView({ behavior: "smooth", block: "center" });
-          setTimeout(() => success.classList.remove("show"), 8000);
+          setTimeout(() => success.classList.remove("show"), 9000);
         }
       }, 900);
     });
   }
 
-  /* ---------- Newsletter (footer) ---------- */
+  /* ---------- Newsletter ---------- */
   document.querySelectorAll(".newsletter-form").forEach((form) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -210,20 +290,16 @@
         return;
       }
       input.classList.remove("invalid");
-      if (msg) msg.textContent = "Subscribed! Watch your inbox for networking tips.";
+      if (msg) msg.textContent = "Subscribed — watch your inbox.";
       input.value = "";
     });
   });
 
   /* ---------- Back to top ---------- */
-  const toTop = document.querySelector(".to-top");
   if (toTop) {
-    window.addEventListener(
-      "scroll",
-      () => toTop.classList.toggle("show", window.scrollY > 600),
-      { passive: true }
+    toTop.addEventListener("click", () =>
+      window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" })
     );
-    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   }
 
   /* ---------- Footer year ---------- */
