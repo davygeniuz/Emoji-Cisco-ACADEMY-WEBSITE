@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emoji Cisco Networking Academy — From Your First Packet to the Enterprise Core</title>
+  <meta name="description" content="Emoji Cisco Networking Academy in Lagos trains complete beginners and working engineers in networking, security and automation — CCNA, CCNP, CyberOps and network automation with hands-on labs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230e2438'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle'%3E%F0%9F%8C%90%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Emoji Cisco Networking Academy — home">
+        <span class="logo__mark" aria-hidden="true">🌐</span>
+        <span class="logo__text">Emoji Cisco <small>Networking Academy</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="courses.html">Courses</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="instructors.html">Instructors</a>
+        <a class="nav__link" href="pricing.html">Pricing</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+      <div class="header__actions">
+        <a class="header__phone" href="tel:+2348012345678">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>
+          +234 801 234 5678
+        </a>
+        <a class="btn btn--primary btn--sm" href="contact.html">Enroll now</a>
+        <button class="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a class="nav__link" href="index.html">Home</a>
+    <a class="nav__link" href="courses.html">Courses</a>
+    <a class="nav__link" href="about.html">About</a>
+    <a class="nav__link" href="instructors.html">Instructors</a>
+    <a class="nav__link" href="pricing.html">Pricing</a>
+    <a class="nav__link" href="contact.html">Contact</a>
+    <a class="btn btn--primary btn--block" href="contact.html">Enroll now</a>
+  </nav>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="hero__badge"><span class="pulse" aria-hidden="true"></span> Enrollment open — October 2026 cohort</span>
+          <h1>Master networking from your <span class="grad">first packet</span> to the enterprise core.</h1>
+          <p class="hero__sub">
+            Whether you have never opened a terminal or you already run production networks,
+            Emoji Cisco Networking Academy takes you further — with hands-on labs, certified
+            instructors, and career-focused mentoring in the heart of Lagos.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="contact.html">Start your journey</a>
+            <a class="btn btn--ghost-light btn--lg" href="courses.html">
+              Explore courses
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <div class="num"><span data-count="5200">0</span><span class="suffix">+</span></div>
+              <div class="label">Engineers trained since 2016</div>
+            </div>
+            <div class="hero__stat">
+              <div class="num"><span data-count="96">0</span><span class="suffix">%</span></div>
+              <div class="label">Certification pass rate</div>
+            </div>
+            <div class="hero__stat">
+              <div class="num"><span data-count="40">0</span><span class="suffix">+</span></div>
+              <div class="label">Hiring partner companies</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="topology-card">
+            <div class="topology-card__head">
+              <span class="topology-card__title">
+                <span class="dot dot--blue" aria-hidden="true"></span> Lab topology · live session
+              </span>
+              <span class="topology-card__status"><span class="dot dot--green" aria-hidden="true"></span> All links up</span>
+            </div>
+            <svg viewBox="0 0 520 380" role="img" aria-label="Animated network topology diagram showing a core router connected to two switches, a workstation, a cloud and a server" style="width:100%;height:auto">
+              <defs>
+                <linearGradient id="nodeGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#00bceb"/>
+                  <stop offset="1" stop-color="#049fd9"/>
+                </linearGradient>
+                <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+                  <feGaussianBlur stdDeviation="6" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+
+              <!-- Links -->
+              <g stroke-linecap="round">
+                <line x1="260" y1="150" x2="110" y2="70" stroke="rgba(0,188,235,0.28)" stroke-width="2"/>
+                <line x1="260" y1="150" x2="410" y2="70" stroke="rgba(0,188,235,0.28)" stroke-width="2"/>
+                <line x1="110" y1="70" x2="55" y2="240" stroke="rgba(0,188,235,0.28)" stroke-width="2"/>
+                <line x1="410" y1="70" x2="465" y2="240" stroke="rgba(0,188,235,0.28)" stroke-width="2"/>
+                <line x1="260" y1="150" x2="260" y2="320" stroke="rgba(0,188,235,0.28)" stroke-width="2"/>
+
+                <line class="flow-line" x1="260" y1="150" x2="110" y2="70" stroke="#00bceb" stroke-width="2.5"/>
+                <line class="flow-line" x1="260" y1="150" x2="410" y2="70" stroke="#00bceb" stroke-width="2.5"/>
+                <line class="flow-line" x1="110" y1="70" x2="55" y2="240" stroke="#00bceb" stroke-width="2.5"/>
+                <line class="flow-line" x1="410" y1="70" x2="465" y2="240" stroke="#00bceb" stroke-width="2.5"/>
+                <line class="flow-line" x1="260" y1="150" x2="260" y2="320" stroke="#00bceb" stroke-width="2.5"/>
+              </g>
+
+              <!-- Nodes -->
+              <g font-family="'JetBrains Mono', monospace" font-size="11" fill="#ffffff" text-anchor="middle">
+                <!-- SW1 -->
+                <circle cx="110" cy="70" r="26" fill="rgba(0,188,235,0.12)" stroke="rgba(0,188,235,0.5)"/>
+                <circle cx="110" cy="70" r="7" fill="url(#nodeGrad)" filter="url(#glow)"/>
+                <text x="110" y="116">SW-ACCESS-01</text>
+
+                <!-- SW2 -->
+                <circle cx="410" cy="70" r="26" fill="rgba(0,188,235,0.12)" stroke="rgba(0,188,235,0.5)"/>
+                <circle cx="410" cy="70" r="7" fill="url(#nodeGrad)" filter="url(#glow)"/>
+                <text x="410" y="116">SW-ACCESS-02</text>
+
+                <!-- PC -->
+                <circle cx="55" cy="240" r="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)"/>
+                <circle cx="55" cy="240" r="7" fill="#ffffff"/>
+                <text x="55" y="286" fill="rgba(255,255,255,0.65)">PC · VLAN 10</text>
+
+                <!-- Cloud -->
+                <circle cx="465" cy="240" r="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)"/>
+                <text x="465" y="245" fill="#ffffff" font-size="14">☁</text>
+                <text x="465" y="286" fill="rgba(255,255,255,0.65)">ISP · WAN</text>
+
+                <!-- Server -->
+                <circle cx="260" cy="320" r="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)"/>
+                <circle cx="260" cy="320" r="7" fill="#ffffff"/>
+                <text x="260" y="366" fill="rgba(255,255,255,0.65)">SRV · DMZ</text>
+
+                <!-- Core router -->
+                <rect x="196" y="104" width="128" height="92" rx="14" fill="rgba(0,188,235,0.14)" stroke="#00bceb" stroke-width="1.5"/>
+                <text x="260" y="140" fill="#00bceb" font-size="12" font-weight="600">CORE ROUTER</text>
+                <text x="260" y="162" fill="rgba(255,255,255,0.75)" font-size="10">R1 · OSPF · BGP</text>
+                <text x="260" y="182" fill="rgba(255,255,255,0.5)" font-size="10">10.0.0.1/24</text>
+              </g>
+            </svg>
+          </div>
+          <div class="float-chip float-chip--1"><span aria-hidden="true">📡</span> 12ms <small>avg. latency</small></div>
+          <div class="float-chip float-chip--2"><span aria-hidden="true">🔒</span> Lab VPN <small>secured</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRUST STRIP ===================== -->
+    <div class="trust">
+      <div class="container trust__inner">
+        <span class="trust__label">Where our alumni work</span>
+        <span class="trust__item">MTN Nigeria</span>
+        <span class="trust__item">Cisco Systems</span>
+        <span class="trust__item">Flutterwave</span>
+        <span class="trust__item">Interswitch</span>
+        <span class="trust__item">Andela</span>
+        <span class="trust__item">Access Bank</span>
+      </div>
+    </div>
+
+    <!-- ===================== LEARNING PATH ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Learning path</span>
+          <h2>One academy, every level — from newbie to expert</h2>
+          <p class="lead">Start where you are. Every step ends with a recognised credential and a portfolio of labs you actually built.</p>
+        </div>
+        <div class="path">
+          <div class="path__step reveal" data-delay="1">
+            <div class="path__badge">01</div>
+            <h3>Foundation</h3>
+            <p>What is a network? IP addresses, cabling, the OSI model and your first Cisco CLI commands.</p>
+            <span class="path__tag">No experience needed</span>
+          </div>
+          <div class="path__step reveal" data-delay="2">
+            <div class="path__badge">02</div>
+            <h3>Associate · CCNA</h3>
+            <p>Switching, routing, wireless essentials, IP connectivity and security fundamentals.</p>
+            <span class="path__tag">Industry entry point</span>
+          </div>
+          <div class="path__step reveal" data-delay="3">
+            <div class="path__badge">03</div>
+            <h3>Professional · CCNP</h3>
+            <p>Enterprise architecture, advanced routing, SD-WAN, automation and troubleshooting.</p>
+            <span class="path__tag">For working engineers</span>
+          </div>
+          <div class="path__step reveal" data-delay="4">
+            <div class="path__badge">04</div>
+            <h3>Expert &amp; Specialist</h3>
+            <p>Security, CyberOps, DevNet automation and cloud — the tracks that make you irreplaceable.</p>
+            <span class="path__tag">Career acceleration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED PROGRAMS ===================== -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Featured programs</span>
+          <h2>Courses built around real labs, not slide decks</h2>
+          <p class="lead">Every program runs on emulated Cisco topologies — you configure, break and fix networks from week one.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="course-card reveal" data-delay="1">
+            <div class="course-card__banner" aria-hidden="true">🧭<span class="course-card__level">Beginner</span></div>
+            <div class="course-card__body">
+              <span class="course-card__track">Foundation</span>
+              <h3>Networking Essentials</h3>
+              <p>Build mental models that last: OSI &amp; TCP/IP, IPv4/IPv6 addressing, cabling, and basic device configuration.</p>
+              <div class="course-card__meta">
+                <span class="chip">🕐 8 weeks</span>
+                <span class="chip">📍 Onsite / Online</span>
+                <span class="chip">🎓 Certificate</span>
+              </div>
+              <div class="course-card__foot">
+                <span class="course-card__price">₦120,000 <small>full program</small></span>
+                <a class="link-arrow" href="courses.html">Details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal" data-delay="2">
+            <div class="course-card__banner" aria-hidden="true">🔀<span class="course-card__level">Beginner–Int.</span></div>
+            <div class="course-card__body">
+              <span class="course-card__track">Routing &amp; Switching</span>
+              <h3>CCNA Full Track</h3>
+              <p>The complete three-course CCNA journey: network fundamentals, switching &amp; routing, and enterprise security.</p>
+              <div class="course-card__meta">
+                <span class="chip">🕐 24 weeks</span>
+                <span class="chip">📍 Onsite / Online</span>
+                <span class="chip">🎓 CCNA prep</span>
+              </div>
+              <div class="course-card__foot">
+                <span class="course-card__price">₦420,000 <small>or 3 × ₦150,000</small></span>
+                <a class="link-arrow" href="courses.html">Details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal" data-delay="3">
+            <div class="course-card__banner" aria-hidden="true">🛡️<span class="course-card__level">Intermediate</span></div>
+            <div class="course-card__body">
+              <span class="course-card__track">Security</span>
+              <h3>Network Security &amp; CyberOps</h3>
+              <p>Defend what you build: ACLs, VPNs, firewalls, SIEM basics, threat detection and incident response.</p>
+              <div class="course-card__meta">
+                <span class="chip">🕐 10 weeks</span>
+                <span class="chip">📍 Onsite / Online</span>
+                <span class="chip">🎓 CyberOps prep</span>
+              </div>
+              <div class="course-card__foot">
+                <span class="course-card__price">₦210,000 <small>full program</small></span>
+                <a class="link-arrow" href="courses.html">Details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal" data-delay="1">
+            <div class="course-card__banner" aria-hidden="true">🤖<span class="course-card__level">Expert</span></div>
+            <div class="course-card__body">
+              <span class="course-card__track">Automation</span>
+              <h3>Network Automation with Python</h3>
+              <p>Stop typing the same commands. Script routers, consume REST APIs and build CI pipelines for the network.</p>
+              <div class="course-card__meta">
+                <span class="chip">🕐 8 weeks</span>
+                <span class="chip">📍 Online</span>
+                <span class="chip">🎓 DevNet prep</span>
+              </div>
+              <div class="course-card__foot">
+                <span class="course-card__price">₦180,000 <small>full program</small></span>
+                <a class="link-arrow" href="courses.html">Details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal" data-delay="2">
+            <div class="course-card__banner" aria-hidden="true">☁️<span class="course-card__level">Intermediate</span></div>
+            <div class="course-card__body">
+              <span class="course-card__track">Cloud &amp; Data Center</span>
+              <h3>Cloud Infrastructure Basics</h3>
+              <p>Virtualisation, overlay networks, cloud connectivity and where the data center meets the internet.</p>
+              <div class="course-card__meta">
+                <span class="chip">🕐 8 weeks</span>
+                <span class="chip">📍 Online</span>
+                <span class="chip">🎓 Certificate</span>
+              </div>
+              <div class="course-card__foot">
+                <span class="course-card__price">₦190,000 <small>full program</small></span>
+                <a class="link-arrow" href="courses.html">Details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal" data-delay="3">
+            <div class="course-card__banner" aria-hidden="true">🏗️<span class="course-card__level">Expert</span></div>
+            <div class="course-card__body">
+              <span class="course-card__track">Professional</span>
+              <h3>CCNP Enterprise Core</h3>
+              <p>Architecture, virtualisation, infrastructure, assurance and the automation that ties it all together.</p>
+              <div class="course-card__meta">
+                <span class="chip">🕐 16 weeks</span>
+                <span class="chip">📍 Onsite</span>
+                <span class="chip">🎓 CCNP prep</span>
+              </div>
+              <div class="course-card__foot">
+                <span class="course-card__price">₦480,000 <small>full program</small></span>
+                <a class="link-arrow" href="courses.html">Details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div style="text-align:center;margin-top:44px" class="reveal">
+          <a class="btn btn--outline" href="courses.html">View all programs
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY US ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Why Emoji Cisco</span>
+          <h2>Built for the way engineers actually learn</h2>
+          <p class="lead">No passive lectures. You build, you break, you fix — with someone experienced watching over your shoulder.</p>
+        </div>
+        <div class="grid grid--4">
+          <div class="card reveal" data-delay="1">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Hands-on virtual labs</h3>
+            <p>Dedicated Cisco IOS topologies available 24/7 — practise from home exactly like in class.</p>
+          </div>
+          <div class="card reveal" data-delay="2">
+            <div class="card__icon card__icon--green" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.9L7 22l5-3 5 3-1.2-8.1"/></svg>
+            </div>
+            <h3>Certified instructors</h3>
+            <p>Every instructor holds active CCIE, CCNP or CyberOps credentials and has run live production networks.</p>
+          </div>
+          <div class="card reveal" data-delay="3">
+            <div class="card__icon card__icon--amber" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            </div>
+            <h3>Career support</h3>
+            <p>CV clinics, interview prep and introductions to our 40+ hiring partners across Nigeria.</p>
+          </div>
+          <div class="card reveal" data-delay="4">
+            <div class="card__icon card__icon--navy" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Schedules that fit</h3>
+            <p>Weekday evening, weekend and fully online cohorts — designed around jobs and school.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS BAND ===================== -->
+    <section class="section section--navy">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow" style="color:var(--cisco-blue)">By the numbers</span>
+          <h2 style="color:#fff">A decade of building network engineers</h2>
+        </div>
+        <div class="stats-band">
+          <div class="stat-box reveal" data-delay="1">
+            <div class="num"><span data-count="5200">0</span>+</div>
+            <div class="label">Graduates since 2016</div>
+          </div>
+          <div class="stat-box reveal" data-delay="2">
+            <div class="num"><span data-count="96">0</span>%</div>
+            <div class="label">First-attempt certification pass rate</div>
+          </div>
+          <div class="stat-box reveal" data-delay="3">
+            <div class="num"><span data-count="120">0</span>+</div>
+            <div class="label">Virtual lab topologies in our library</div>
+          </div>
+          <div class="stat-box reveal" data-delay="4">
+            <div class="num"><span data-count="85">0</span>%</div>
+            <div class="label">Graduates employed within 6 months</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Student stories</span>
+          <h2>From "what is subnetting?" to running the network</h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="quote-card reveal" data-delay="1">
+            <div class="quote-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"I joined knowing nothing but how to use a phone. Two years later I passed my CCNA and now I configure switches for a living. The labs are the difference — you actually do it."</blockquote>
+            <div class="quote-card__person">
+              <span class="avatar" aria-hidden="true">CO</span>
+              <div><div class="name">Chidi Okonkwo</div><div class="role">NOC Engineer · MTN Nigeria</div></div>
+            </div>
+          </div>
+          <div class="quote-card reveal" data-delay="2">
+            <div class="quote-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"As a self-taught engineer I had gaps everywhere. The CCNP track filled them systematically, and the instructors could answer the weird questions from real production."</blockquote>
+            <div class="quote-card__person">
+              <span class="avatar" aria-hidden="true">AB</span>
+              <div><div class="name">Aisha Bello</div><div class="role">Network Engineer · Fintech</div></div>
+            </div>
+          </div>
+          <div class="quote-card reveal" data-delay="3">
+            <div class="quote-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"The automation track changed my career. I now write the Python that configures our routers instead of typing the same commands 200 times."</blockquote>
+            <div class="quote-card__person">
+              <span class="avatar" aria-hidden="true">TE</span>
+              <div><div class="name">Tunde Eze</div><div class="role">NetDevOps · Access Bank</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Questions</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">
+              Do I need any experience to start?
+              <span class="faq__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="faq__a"><p>No. Our Foundation track assumes zero background and starts with what a network actually is. If you already work in IT or networking, our placement interview will fast-track you into the right level so you never pay for lessons you already know.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">
+              Are classes onsite or online?
+              <span class="faq__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="faq__a"><p>Both. Onsite cohorts run at our Lagos campus with full lab access, while online cohorts are live and instructor-led with remote lab environments. You can switch formats between modules at no extra cost.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">
+              Do you prepare students for the official Cisco exams?
+              <span class="faq__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="faq__a"><p>Yes. Our CCNA, CCNP and CyberOps tracks are mapped to the current Cisco certification blueprints and include exam vouchers, practice exams and a guaranteed re-sit support session for anyone who misses the pass mark.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">
+              Can I pay in instalments?
+              <span class="faq__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="faq__a"><p>Every program can be split into three monthly payments, and we reserve a limited number of partial scholarships each cohort for students, career changers and unemployed applicants. Ask us about current openings.</p></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__q" aria-expanded="false">
+              What do I need to take part?
+              <span class="faq__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="faq__a"><p>A laptop with at least 8 GB RAM and a stable internet connection. Everything else — lab emulators, courseware, cloud access and software — is provided by the academy for the duration of your program.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA BAND ===================== -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2 style="color:#fff">Ready to build networks that don't go down?</h2>
+            <p>Join the October 2026 cohort. Talk to an advisor, take the free placement assessment, and lock in early-bird pricing before seats run out.</p>
+          </div>
+          <a class="btn btn--primary btn--lg" href="contact.html">Book a free consultation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="logo" href="index.html">
+            <span class="logo__mark" aria-hidden="true">🌐</span>
+            <span class="logo__text" style="color:#fff">Emoji Cisco <small>Networking Academy</small></span>
+          </a>
+          <p class="footer__about">Training network engineers in Lagos since 2016 — from first principles to expert-level automation, with hands-on labs and real career support.</p>
+          <div class="social-row">
+            <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.07 1.4-2.07 2.87V21H9z"/></svg></a>
+            <a href="#" aria-label="X (Twitter)"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.64l-5.2-6.8-5.95 6.8H1.72l7.5-8.57L1.03 2.25h6.8l4.83 6.32 5.58-6.32zm-1.17 17.52h1.83L7.01 4.13H5.05z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 00-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.84.43A2.5 2.5 0 002.4 7.2 26.6 26.6 0 002 12a26.6 26.6 0 00.4 4.8 2.5 2.5 0 001.76 1.77C5.75 19 12 19 12 19s6.25 0 7.84-.43a2.5 2.5 0 001.76-1.77A26.6 26.6 0 0022 12a26.6 26.6 0 00-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Academy</h4>
+          <nav class="footer__links" aria-label="Footer academy links">
+            <a href="about.html">About us</a>
+            <a href="courses.html">All courses</a>
+            <a href="instructors.html">Our instructors</a>
+            <a href="pricing.html">Pricing &amp; payment</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h4>Popular tracks</h4>
+          <nav class="footer__links" aria-label="Footer course links">
+            <a href="courses.html">Networking Essentials</a>
+            <a href="courses.html">CCNA Full Track</a>
+            <a href="courses.html">Network Security</a>
+            <a href="courses.html">Python Automation</a>
+            <a href="courses.html">CCNP Enterprise</a>
+          </nav>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <div class="footer__contact">
+            <span>📍 4 Academy Close, Lekki Phase 1,<br/>Lagos, Nigeria</span>
+            <a href="tel:+2348012345678">📞 +234 801 234 5678</a>
+            <a href="mailto:hello@emojicisco.academy">✉️ hello@emojicisco.academy</a>
+            <form class="newsletter-form" style="margin-top:6px">
+              <label for="nl-email" style="display:none">Email address</label>
+              <input id="nl-email" type="email" class="form-control" placeholder="Your email address" />
+              <button class="btn btn--primary btn--sm btn--block" type="submit" style="margin-top:10px">Subscribe</button>
+              <p class="newsletter-msg" style="font-size:12.5px;margin-top:8px;color:var(--cisco-blue)"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Emoji Cisco Networking Academy. All rights reserved.</span>
+        <span>Built for engineers who keep the internet running. <a href="#">Privacy</a> · <a href="#">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
